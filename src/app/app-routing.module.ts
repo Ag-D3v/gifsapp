@@ -1,10 +1,19 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {  Routes } from '@angular/router';
 
-const routes: Routes = [];
+export const APP_ROUTES: Routes = [
+  {
+    path:'',
+    redirectTo:'main',
+    pathMatch:'full',
+  },
+  {
+    path:'main',
+    loadChildren: ()=>import('@gifs_ui/route-gifs').then( m => m.routesGifs )
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+  },
+  {
+    path:'**',
+    redirectTo:'main'
+  }
+];
+

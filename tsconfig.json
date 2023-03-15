@@ -18,6 +18,12 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
+    "paths":{
+      "@gifs_app/*":["src/app/gifs/application/*"],
+      "@gifs_dom/*":["src/app/gifs/models/*"],
+      "@gifs_ui/*":["src/app/gifs/vista/*"],
+      "@gifs_inf/*":["src/app/gifs/infrastructure/*"],
+    },
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
